@@ -6450,7 +6450,7 @@ Tilemap:
       - {fileID: 1264740609, guid: 50a2f1d94ad14c848b7eb76fc5237b38, type: 3}
       - {fileID: 465911923, guid: 50a2f1d94ad14c848b7eb76fc5237b38, type: 3}
       - {fileID: 2104032803, guid: 50a2f1d94ad14c848b7eb76fc5237b38, type: 3}
-      m_AnimationSpeed: 12
+      m_AnimationSpeed: 12.000001
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -5, y: 2, z: 1}
@@ -6460,7 +6460,7 @@ Tilemap:
       - {fileID: -132100905, guid: 50a2f1d94ad14c848b7eb76fc5237b38, type: 3}
       - {fileID: 482078449, guid: 50a2f1d94ad14c848b7eb76fc5237b38, type: 3}
       - {fileID: -2051106941, guid: 50a2f1d94ad14c848b7eb76fc5237b38, type: 3}
-      m_AnimationSpeed: 12
+      m_AnimationSpeed: 12.000001
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -4, y: 2, z: 1}
@@ -6716,6 +6716,7 @@ GameObject:
   - component: {fileID: 1205838413}
   - component: {fileID: 1205838414}
   - component: {fileID: 1205838415}
+  - component: {fileID: 1205838416}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -6803,6 +6804,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpeed: 5
+  animator: {fileID: 1205838416}
 --- !u!114 &1205838413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6832,6 +6834,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 9c507617-c2fc-4f03-a50e-3d0d27b78814
     m_ActionName: Game/Movement[/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1205838412}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: Attack
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: b874c7e1-e4b4-4572-b2d0-e30537edf451
+    m_ActionName: Game/Attack[/Keyboard/space]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Game
@@ -6909,6 +6927,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.92059314, y: 1.0294784}
   m_EdgeRadius: 0
+--- !u!95 &1205838416
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1205838409}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8f4890567a5af624fbcbd62c229f35ab, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1939672351
 GameObject:
   m_ObjectHideFlags: 0
